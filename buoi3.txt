@@ -1,0 +1,19 @@
+Index
+-Mục đích: Tăng tốc độ truy vấn dữ liệu bằng cách tạo các chỉ mục cho các cột trong bảng.
+-Ưu điểm: Cải thiện đáng kể hiệu suất truy vấn, đặc biệt với bảng dữ liệu lớn.
+-Nhược điểm: Làm chậm các thao tác INSERT, UPDATE, DELETE do cần cập nhật lại chỉ mục, đồng thời chiếm thêm dung lượng lưu trữ.
+
+Transaction
+-Mục đích: Đảm bảo tính toàn vẹn dữ liệu bằng cách đảm bảo tất cả các thao tác trong giao dịch đều thành công hoặc bị hủy bỏ hoàn toàn.
+-Ưu điểm: Giữ cho dữ liệu an toàn, hỗ trợ ROLLBACK để hoàn tác thay đổi khi xảy ra lỗi.
+-Nhược điểm: Có thể gây khóa tài nguyên, làm giảm hiệu suất khi nhiều giao dịch đồng thời diễn ra.
+
+Trigger
+-Mục đích: Tự động thực thi các lệnh SQL khi có sự kiện xảy ra trên bảng (như thêm, sửa, xóa dữ liệu).
+-Ưu điểm: Tự động hóa các quy trình, đảm bảo tính nhất quán của dữ liệu và giảm thiểu sai sót thủ công.
+-Nhược điểm: Có thể làm giảm hiệu suất hệ thống nếu lạm dụng và khó gỡ lỗi khi logic trở nên phức tạp.
+
+Procedure
+-Mục đích: Tập hợp các lệnh SQL thành một khối lệnh có thể tái sử dụng, giúp xử lý các thao tác phức tạp một cách hiệu quả.
+-Ưu điểm: Tối ưu hóa truy vấn, giảm thời gian thực thi nhờ biên dịch sẵn, đồng thời tăng cường bảo mật bằng cách kiểm soát quyền truy cập vào dữ liệu.
+-Nhược điểm: Có thể trở nên phức tạp khi xử lý logic nghiệp vụ lớn và thiếu linh hoạt hơn so với code ứng dụng.
